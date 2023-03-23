@@ -1,8 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 初めに
 
-## Getting Started
+APIキーは下記に保存しています。（.env.development.local, .env.local）
 
-First, run the development server:
+作業開始前にダウンロードしアプリケーションのルートディレクトリに設置して下さい。
+
+https://drive.google.com/drive/folders/1XDIwZG3DX90kOSpwIAWjvzuWXA59PIVR?usp=share_link
+
+その後下記コマンドを実行。
 
 ```bash
 npm run dev
@@ -10,25 +14,20 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開くと、結果が表示されます。
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`src/pages/index.tsx` を変更してページを編集することができます。ファイルを編集すると、ページが自動的に更新されます。
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## CSSについて
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+本プロジェクトではCSS in JSであるstyled-componentを採用しています。
 
-## Learn More
+全体共通の設定ファイルは`src/theme/setting` にあります。
 
-To learn more about Next.js, take a look at the following resources:
+ページ毎・コンポーネント毎のスタイルはtsxに記載してあるので、適宜変更して下さい。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## CMSについて
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+ヘッドレスCMSとしてmicroCMSを採用しています。
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ログイン方法はBacklogに記載があるので、参照下さい。
