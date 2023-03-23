@@ -11,7 +11,7 @@ ${reset}
 }
 `
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
       <GrobalStyle />
