@@ -33,6 +33,7 @@ export const Seo: React.FC<SeoProps> = ({
       <meta property="og:image" content={imageUrl} />
       <meta property="og:type" content="website" />
       <link rel="canonical" href={url} />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
     </Head>
   );
 }

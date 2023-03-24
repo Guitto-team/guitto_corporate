@@ -6,31 +6,42 @@ import styled from 'styled-components'
 export default function Header() {
   return (
     <StyledHeader>
-      <Link href={`/`} scroll={false}>
-        <Home>
-          <Icon>
-            <Image src={'/images/common/logo.png'} alt={'Good it! ぐいっと'}  width={188} height={49} />
-          </Icon>
-        </Home>
+      <Link href={`/`}>
+        <Icon>
+          <Image src={'/images/common/logo.png'} alt={'Good it! ぐいっと'}  width={188} height={49} />
+        </Icon>
       </Link>
       <Lists>
         <ListsItem>
-          <Link href={'/'} scroll={false}>
-            <StyledLink>
-              <Icon>
-                <Image src={'/images/common/home.svg'} alt={'HOMEのアイコン'}  width={22} height={21} />
-              </Icon>
-            </StyledLink>
-          </Link>
+          <Link href={'/mind'}>mind</Link>
         </ListsItem>
         <ListsItem>
-          <Link href={`https://www.guitto.co.jp/contact`} scroll={false}>
-            <StyledLink target="_blank">
-              <Icon>
-                <Image src={'/images/common/mail.svg'} alt={'CONTACTのアイコン'}  width={25} height={18} />
-              </Icon>
-            </StyledLink>
-          </Link>
+          <Link href={'/service'}>service</Link>
+        </ListsItem>
+        <ListsItem>
+          <Link href={'/works'}>works</Link>
+        </ListsItem>
+        <ListsItem>
+          <Link href={'/voice'}>voice</Link>
+        </ListsItem>
+        <ListsItem>
+          <Link href={'/member'}>member</Link>
+        </ListsItem>
+        <ListsItem>
+          <Link href={'/recruit'}>recruit</Link>
+        </ListsItem>
+        <ListsItem>
+          <Link href={'/faq'}>faq</Link>
+        </ListsItem>
+        <ListsItem>
+          <a href="https://guitto.blog" target="_blank" rel="noopener noreferrer">
+            blog
+          </a>
+        </ListsItem>
+        <ListsItem>
+          <a href="https://www.guitto.co.jp/contact" target="_blank" rel="noopener noreferrer">
+            contact
+          </a>
         </ListsItem>
       </Lists>
     </StyledHeader>
@@ -56,12 +67,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Home = styled.a`
-  font-size: 20px;
-  font-weight: bold;
-`;
-
-const Icon = styled.i`
+const Icon = styled.span`
   position: relative;
   width: 22px;
   height: 22px;
@@ -74,9 +80,27 @@ const Lists = styled.ul`
 `;
 
 const ListsItem = styled.li`
-
-`;
-
-const StyledLink = styled.a`
-  
+  > a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: ${({ theme }) => theme.colors.black};
+      opacity: 0;
+      transition: opacity 0.3s, bottom 0.3s;
+    }
+    &:hover {
+      &:after {
+        bottom: -5px;
+        opacity: 1;
+      }
+    }
+  }
 `;
