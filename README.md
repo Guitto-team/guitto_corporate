@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dfaaa7e1-63a9-48d4-abb4-243ec1782b13/deploy-status)](https://app.netlify.com/sites/statuesque-dragon-e12b5e/deploys)
+
 ## 初めに
 
 APIキーは下記に保存しています。（.env.development.local, .env.local）

@@ -9,4 +9,5 @@ export const colors = {
   subcolor: '#34051a',
 
   //その他
+  bordercolor: '#eaeaea',
 };
