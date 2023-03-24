@@ -10,6 +10,15 @@ https://drive.google.com/drive/folders/1XDIwZG3DX90kOSpwIAWjvzuWXA59PIVR?usp=sha
 
 その後下記コマンドを実行。
 
+下記は初回のみ（パッケージインストール後は不要）
+
+```bash
+npm i -D
+# or
+yarn
+```
+パッケージインストール後下記、アプリケーション起動
+
 ```bash
 npm run dev
 # or
