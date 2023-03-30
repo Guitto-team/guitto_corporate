@@ -1,6 +1,6 @@
 import styled, { ThemedStyledProps } from 'styled-components'
 import Link from 'next/link';
-import { Flex } from 'src/components/foundation/flex';
+import Flex from 'src/components/foundation/flex';
 
 type LinkProps = Omit<React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>, 'ref'> & {
   isActive: boolean;
@@ -20,9 +20,7 @@ export const Pagination = ({ maxPageNumber, currentPageNumber }) => {
   return (
     <Flex justifyContent='j-center' gap='small'>
       {currentPageNumber !== 1 && (
-        <Link href={`/blog/page/${prevPage}`}>
-          <StyledLink>＜</StyledLink>
-        </Link>
+        <StyledLink href={`/blog/page/${prevPage}`}>＜</StyledLink>
       )}
 
       {pageNumbers.map((pageNumber) => {
@@ -35,15 +33,13 @@ export const Pagination = ({ maxPageNumber, currentPageNumber }) => {
       })}
 
       {currentPageNumber !== maxPageNumber && (
-        <Link href={`/blog/page/${nextPage}`}>
-          <StyledLink>＞</StyledLink>
-        </Link>
+        <StyledLink href={`/blog/page/${nextPage}`}>＞</StyledLink>
       )}
     </Flex>
   );
 };
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   display: grid;
   place-content: center;
   width: 2em;

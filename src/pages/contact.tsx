@@ -10,14 +10,14 @@ import Typography from 'src/components/ui-parts/typography'
 export default function Page() {
   return (
     <>
-      <Seo title='企業理念' />
+      <Seo title='お問い合わせ' />
       <Header />
 
       <Main>
         <LayoutInner>
           <LayoutStack>
 
-            <Typography html='h1' size='xl7' textAlign='center' weight='semibold'>MIND</Typography>
+            <Typography html='h1' size='xl7' textAlign='center' weight='semibold'>CONTACT</Typography>
 
           </LayoutStack>
         </LayoutInner>

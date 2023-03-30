@@ -1,8 +1,8 @@
-import {AppProps} from "next/app";
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'src/theme/theme';
+import { AnimatePresence } from 'framer-motion'
 
 const GrobalStyle = createGlobalStyle`
 ${reset}
@@ -16,7 +16,9 @@ function MyApp({ Component, pageProps }) {
     <>
       <GrobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <AnimatePresence>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </ThemeProvider>
     </>
   ) 

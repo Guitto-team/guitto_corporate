@@ -13,15 +13,15 @@ export const Grid: React.FC<GridProps> = ({
     children,
   }) => {
   return (
-    <Container>
+    <GridContainer type={type} gap={gap}>
       {children}
-    </Container>
+    </GridContainer>
   );
 }
 
 export default React.memo(Grid);
 
-const Container = styled.div<GridProps>`
+const GridContainer = styled.ul<{type: GridProps['type'], gap: GridProps['gap']}>`
   display: grid;
 
   grid-template-columns: repeat(${({type}) => {

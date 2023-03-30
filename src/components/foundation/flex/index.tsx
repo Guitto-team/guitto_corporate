@@ -10,18 +10,22 @@ export interface FlexProps {
 }
 
 export const Flex: React.FC<FlexProps> = ({
+    justifyContent = 'j-flex-start',
+    alignItems = 'a-center',
+    direction = 'row',
+    gap = 'medium',
     children,
   }) => {
   return (
-    <List>
+    <FlexContainer justifyContent={justifyContent} alignItems={alignItems} direction={direction} gap={gap}>
       {children}
-    </List>
+    </FlexContainer>
   );
 }
 
 export default React.memo(Flex);
 
-const List = styled.ul<FlexProps>`
+const FlexContainer = styled.ul<FlexProps>`
   display: flex;
   flex-wrap: wrap;
 
