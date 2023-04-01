@@ -14,7 +14,7 @@ export const Eyecatch: React.FC<EyecatchProps> = ({
     objectFit = 'cover'
   }) => {
 
-  const imageUrl = eyecatch?.url ?? '/images/placehold.png';
+  const imageUrl = eyecatch?.url ?? '/images/common/placehold.png';
 
   return (
     <ImageWrapper>

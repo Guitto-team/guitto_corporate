@@ -39,9 +39,7 @@ export default function Header() {
           </a>
         </ListsItem>
         <ListsItem>
-          <a href="https://www.guitto.co.jp/contact" target="_blank" rel="noopener noreferrer">
-            contact
-          </a>
+          <Link href={'/contact'}>contact</Link>
         </ListsItem>
       </Lists>
     </StyledHeader>

@@ -9,6 +9,7 @@ import LayoutStack from 'src/components/foundation/layout-stack'
 import Typography from 'src/components/ui-parts/typography'
 import Grid from 'src/components/foundation/grid';
 import MemberItem from 'src/components/ui-projects/member-item';
+import MainVisual from 'src/components/ui-projects/main-visual';
 import { motion } from 'framer-motion'
 
 export default function Page({ members }) {
@@ -18,11 +19,11 @@ export default function Page({ members }) {
       <Header />
 
       <Main>
+        <MainVisual title='MEMBER' subtitle='ぐいっとは成長欲求ド変態の集まりです。' />
+
         <LayoutInner>
           <LayoutStack>
-
-            <Typography html='h1' size='xl7' textAlign='center' weight='semibold'>MEMBER</Typography>
-
+            
             <Grid type='col2' gap='large'>
               {members.map((member, index) => (
                 <motion.li
