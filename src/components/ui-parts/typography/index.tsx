@@ -3,24 +3,26 @@ import styled from 'styled-components'
 
 export interface TypographyProps {
   children: React.ReactNode,
-  html?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span',
+  html?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'
   size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | 'xl2' | 'xl3' | 'xl4' | 'xl5' | 'xl6' | 'xl7'
-  weight?: 'thin' | 'extralight' | 'regular' | 'normal' | 'medium' | 'semibold' | 'bold',
-  textAlign?: 'left' | 'center' | 'right',
+  weight?: 'thin' | 'extralight' | 'regular' | 'normal' | 'medium' | 'semibold' | 'bold'
+  lineHeight?: 'small' | 'medium' | 'large'
+  textAlign?: 'left' | 'center' | 'right'
   color?: 'black' | 'white' | 'primary' | 'secondary' | 'subcolor'
 }
 
-const Typography: React.FC<TypographyProps> = ({
+export const Typography: React.FC<TypographyProps> = ({
   children,
   html = 'span',
   size = 'base',
   weight = 'normal',
+  lineHeight = 'medium',
   textAlign = 'left',
   color = 'black'
 }) => {
 
 return (
-  <TypographyWrapper as={html} size={size} weight={weight} textAlign={textAlign} color={color}>
+  <TypographyWrapper as={html} size={size} weight={weight} lineHeight={lineHeight} textAlign={textAlign} color={color}>
     {children}
   </TypographyWrapper>
 );
@@ -76,6 +78,18 @@ const TypographyWrapper = styled.p<TypographyProps>`
         return theme.fonts.weight.bold;
       default:
         return theme.fonts.weight.normal;
+    }
+  }};
+  line-height: ${({ lineHeight, theme }) => {
+    switch (lineHeight) {
+      case 'small':
+        return theme.fonts.lineHeight.small;
+      case 'medium':
+        return theme.fonts.lineHeight.medium;
+      case 'large':
+        return theme.fonts.lineHeight.large;
+      default:
+        return theme.fonts.lineHeight.medium;
     }
   }};
   color: ${({ theme, color }) => {

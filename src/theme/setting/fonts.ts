@@ -24,4 +24,9 @@ export const fonts = {
     semibold: 600,
     bold: 700,
   },
+  lineHeight: {
+    small: '1',
+    medium: '1.5',
+    large: '2',
+  },
 };
